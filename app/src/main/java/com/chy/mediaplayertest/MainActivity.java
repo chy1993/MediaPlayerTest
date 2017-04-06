@@ -9,6 +9,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.MediaController;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 import android.widget.VideoView;
 
@@ -27,6 +28,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         videoView = (VideoView)this.findViewById(R.id.videoView );
 
+        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.FILL_PARENT,
+                RelativeLayout.LayoutParams.FILL_PARENT);
+        layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+        layoutParams.addRule(RelativeLayout.ALIGN_PARENT_TOP);
+        layoutParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
+        layoutParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+        videoView.setLayoutParams(layoutParams);
+
         //关于权限
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE)
@@ -38,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         } else
         {
             //本地的视频 需要在手机SD卡根目录添加一个视频
-            String videoUrl1 = "/sdcard/Download/KLSW_1.mp4" ;
+            String videoUrl1 = "/sdcard/Download/2.mp4" ;
 //            Log.i("11111111111111111111111",videoUrl1);
             Uri uri = Uri.parse(videoUrl1);
             //设置视频控制器

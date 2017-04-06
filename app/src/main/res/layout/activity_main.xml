@@ -5,13 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.chy.mediaplayertest.MainActivity">
-
-        <VideoView
-            android:scaleY="1"
-            android:scaleX="1"
-            android:id="@+id/videoView"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
+            android:layout_height="match_parent" >
+                <VideoView
+                    android:scaleX="1"
+                    android:id="@+id/videoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+        </RelativeLayout>
 
 </RelativeLayout>
