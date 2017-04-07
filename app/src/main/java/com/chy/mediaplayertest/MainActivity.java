@@ -46,8 +46,7 @@ public class MainActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(this,
                     new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
                     MY_PERMISSIONS_WRITE_EXTERNAL_STORAGE);
-        } else
-        {
+        } else {
             //本地的视频 需要在手机SD卡根目录添加一个视频
             String videoUrl1 = "/sdcard/Download/KLSW_1.mp4" ;
 //            Log.i("11111111111111111111111",videoUrl1);
