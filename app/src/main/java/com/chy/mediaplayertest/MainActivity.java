@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
      * 设置view播放控制条
      */
     private MediaController mediaController;
+//    private MyMediaController mediaController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,14 +49,19 @@ public class MainActivity extends AppCompatActivity {
         } else
         {
             //本地的视频 需要在手机SD卡根目录添加一个视频
-            String videoUrl1 = "/sdcard/Download/2.mp4" ;
+            String videoUrl1 = "/sdcard/Download/KLSW_1.mp4" ;
 //            Log.i("11111111111111111111111",videoUrl1);
             Uri uri = Uri.parse(videoUrl1);
             //设置视频控制器
             mediaController = new MediaController(this);
+//            mediaController = new MyMediaController(this);
+
+
+//            videoView.setMediaController(mediaController);
             videoView.setMediaController(mediaController);
+
             //设置显示控制条
-            mediaController.show(1);
+//            mediaController.show(1);
             //播放完成回调
             videoView.setOnCompletionListener( new MyPlayerOnCompletionListener());
 
