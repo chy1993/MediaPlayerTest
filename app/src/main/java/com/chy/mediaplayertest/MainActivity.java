@@ -56,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
             mediaController = new MediaController(this);
 //            mediaController = new MyMediaController(this);
 
-
 //            videoView.setMediaController(mediaController);
             videoView.setMediaController(mediaController);
 
@@ -74,9 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
     class MyPlayerOnCompletionListener implements MediaPlayer.OnCompletionListener {
-
         @Override
         public void onCompletion(MediaPlayer mp) {
             Toast.makeText( MainActivity.this, "播放完成了", Toast.LENGTH_SHORT).show();
